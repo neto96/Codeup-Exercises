@@ -23,9 +23,12 @@ $books = [
     )
 ];
 
+
 foreach ($books as $key => $book) {
-	echo "{$key}\n";
-	foreach ($book as $key2 => $info) {
-	echo"{$key2}: {$info}\n";
+	if ($book['published'] > 1950) {
+		echo "{$key}\n";
+		foreach ($book as $key2 => $info) {
+		echo"{$key2}: {$info}\n";
+		}
 	}
-}
+};
