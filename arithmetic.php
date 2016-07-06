@@ -2,22 +2,24 @@
 
 function add($a, $b)
 {
-    return $a + $b;
+    echo "$a + $b = " . ($a + $b) . "\n";
 }
 
 function subtract($a, $b)
 {
-    // Add code here
+    echo "$a - $b = " . ($a - $b) ."\n";
 }
 
 function multiply($a, $b)
 {
-    // Add code here
+    echo "$a * $b = " . $a * $b ."\n";
 }
 
 function divide($a, $b)
 {
-    // Add code here
+    echo "$a / $b = " . $a / $b ."\n";
 }
-
-// Add code to test your functions here
+add(1, 2);
+subtract(2, 1);
+multiply(2, 2);
+divide(10, 5);
