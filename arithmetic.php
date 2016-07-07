@@ -3,50 +3,50 @@
 function add($a, $b)
 {
 	if (is_numeric($a) && is_numeric($b)) {
-	    echo "$a + $b = " . ($a + $b) . "\n";
+	    return "$a + $b = " . ($a + $b) . "\n";
 	} else {
-		echo "ERROR: Both arguments must be numbers\n";
+		return "ERROR: Both arguments must be numbers.\nYour inputs were $a and $b.\n";
 	}
 }
 
 function subtract($a, $b)
 {
 	if (is_numeric($a) && is_numeric($b)) {
-    	echo "$a - $b = " . ($a - $b) ."\n";
+    	return "$a - $b = " . ($a - $b) ."\n";
     } else {
-		echo "ERROR: Both arguments must be numbers\n";
+		return "ERROR: Both arguments must be numbers.\nYour inputs were $a and $b.\n";
 	}
 }
 
 function multiply($a, $b)
 {
 	if (is_numeric($a) && is_numeric($b)) {
-    	echo "$a * $b = " . $a * $b ."\n";
+    	return "$a * $b = " . $a * $b ."\n";
 	} else {
-		echo "ERROR: Both arguments must be numbers\n";
+		return "ERROR: Both arguments must be numbers.\nYour inputs were $a and $b.\n";
 	}
 }
 
 function divide($a, $b)
 {
 	if ($b == 0) {
-		echo "Can't divide by 0 bro.\n";
+		return "Can't divide by 0 bro.\n";
 	} elseif (is_numeric($a) && is_numeric($b)) {
-    	echo "$a / $b = " . $a / $b ."\n";
+    	return "$a / $b = " . $a / $b ."\n";
 	} else {
-		echo "ERROR: Both arguments must be numbers\n";
+		return "ERROR: Both arguments must be numbers.\nYour inputs were $a and $b.\n";
 	}
 }
 function modulus ($a, $b)
 {
 	if (is_numeric($a) && is_numeric($b)) {
-		echo "$a % $b = " . $a % $b . "\n";
+		return "$a % $b = " . $a % $b . "\n";
 	} else {
-		echo "ERROR: Both arguments must be numbers\n";
+		return "ERROR: Both arguments must be numbers.\nYour inputs were $a and $b.\n";
 	}
 }
-add(1, 2);
-subtract(2, 1);
-multiply(2, 2);
-divide(10, 5);
-modulus(2, 4);
+echo (add(1, 2));
+echo (subtract(2, 1));
+echo (multiply(2, 2));
+echo (divide(10, 5));
+echo (modulus(2, 4));
