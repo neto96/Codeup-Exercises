@@ -1,7 +1,7 @@
 <?php
 
 function inspect($argument) {
-	return "The" . gettype($argument) . " is $argument\n";
+	return "The " . gettype($argument) . " is $argument\n";
 }
 
 $string1 = "I'm a little teapot";
@@ -19,23 +19,24 @@ $null = NULL;
 // TODO: After each echo statement, use inspect() to output the variable's type and its value
 
 echo 'Inspecting $num1:' . PHP_EOL;
-
+echo(inspect($num1));
 echo 'Inspecting $num2:' . PHP_EOL;
-
+echo(inspect($num2));
 echo 'Inspecting $num3:' . PHP_EOL;
-
+echo(inspect($num3));
 echo 'Inspecting $num4:' . PHP_EOL;
-
+echo(inspect($num4));
 echo 'Inspecting $null:' . PHP_EOL;
-
+echo(inspect($null));
 echo 'Inspecting $bool1' . PHP_EOL;
-
+echo(inspect($bool1));
 echo 'Inspecting $bool2' . PHP_EOL;
-
+echo(inspect($bool2));
 echo 'Inspecting $string1' . PHP_EOL;
-
+echo(inspect($string1));
 echo 'Inspecting $string2' . PHP_EOL;
-
+echo(inspect($string2));
 echo 'Inspecting $array1' . PHP_EOL;
-
+echo(inspect($array1));
 echo 'Inspecting $array2' . PHP_EOL;
+echo(inspect($array2));
