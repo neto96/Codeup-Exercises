@@ -1,8 +1,21 @@
 <?php
 
 function inspect($argument) {
-	return "The " . gettype($argument) . " is $argument\n";
-}
+	if (is_null($argument)){
+		return "The value is NULL.\n";
+	} elseif (empty($argument) && is_array($argument)) {
+		return "The array is empty.\n";
+	} elseif (is_array($argument)) {
+		return "The value is an array.\n";
+	} elseif (is_bool($argument)) {
+		return boolval($argument) ? "The boolean is true.\n" : "The boolean is false.\n";
+	} elseif (is_string($argument) && empty($argument)) {
+		return "The string is empty.\n";
+	} else {
+		return "The " . gettype($argument) . " is $argument\n";
+	}
+}	
+	
 
 $string1 = "I'm a little teapot";
 $string2 = '';
