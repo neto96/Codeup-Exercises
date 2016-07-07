@@ -29,7 +29,9 @@ function multiply($a, $b)
 
 function divide($a, $b)
 {
-	if (is_numeric($a) && is_numeric($b)) {
+	if ($b == 0) {
+		echo "Can't divide by 0 bro.\n";
+	} elseif (is_numeric($a) && is_numeric($b)) {
     	echo "$a / $b = " . $a / $b ."\n";
 	} else {
 		echo "ERROR: Both arguments must be numbers\n";
