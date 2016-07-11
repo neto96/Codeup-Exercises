@@ -1,14 +1,17 @@
 <?php
 
 function humanizedList ($array) {
-	array_pop($array);
-	array_push($array, ' and Tony Stark');
+	$lastItem = array_pop($array);
+	array_push($array, " and $lastItem");
 	return $array = implode(",", $array);
 }
 
 $physicistsString = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mallory, Bruce Banner, Tony Stark';
 
 $physicistsArray = explode(",", $physicistsString);
+// foreach ($physicistsArray as $physicist) {
+	
+// }
 
 $famousFakePhysicists = humanizedList($physicistsArray);
 
